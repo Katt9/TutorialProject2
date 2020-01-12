@@ -1,0 +1,22 @@
+{
+  "meta":
+  {
+    "type": "schema"
+  },
+  "data":
+          [
+            "str",
+            "str",
+            "str",
+            "int",
+            "int",
+            "int",
+            "str",
+            "str",
+            "int",
+            "str",
+            "str",
+            "str",
+            "str"
+          ]
+}
