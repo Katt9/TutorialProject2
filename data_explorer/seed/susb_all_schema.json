@@ -1,0 +1,74 @@
+{
+  "meta":
+  {
+    "type": "schema"
+  },
+  "data":
+          [
+            {
+              "name": "state",
+              "type": "object"
+            },
+            {
+              "name": "naics",
+              "type": "object"
+            },
+            {
+              "name": "entrsize",
+              "type": "object"
+            },
+            {
+              "name": "firm",
+              "type": "int64",
+              "greater_equal": 0
+            },
+            {
+              "name": "estb",
+              "type": "int64",
+              "greater_equal": 0
+            },
+            {
+              "name": "empl",
+              "type": "int64",
+              "greater_equal": 0
+            },
+            {
+              "name": "empfl_r",
+              "type": "object"
+            },
+            {
+              "name": "empfl_n",
+              "type": "object"
+            },
+            {
+              "name": "payr",
+              "type": "int64",
+              "greater_equal": 0
+            },
+            {
+              "name": "payrfl_n",
+              "type": "object"
+            },
+            {
+              "name": "rcpt",
+              "type": "int64",
+              "greater_equal": 0
+            },
+            {
+              "name": "rcptfl_n",
+              "type": "object"
+            },
+            {
+              "name": "statedscr",
+              "type": "object"
+            },
+            {
+              "name": "naicsdscr",
+              "type": "object"
+            },
+            {
+              "name": "entrsizedscr",
+              "type": "object"
+            }
+          ]
+}
