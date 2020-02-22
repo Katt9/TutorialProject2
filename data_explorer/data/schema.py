@@ -20,8 +20,8 @@ class Schema:
     def check_num_of_columns(self):
         return self.num_of_columns == self.dataframe.shape[1]
 
-   @property
-   def check_type(self):
+    @property
+    def check_type(self):
        return self.dataframe[self.name].dtype == self.type
 
     @property
@@ -31,8 +31,8 @@ class Schema:
     def check_dataframe(self):
         if self.check_num_of_columns:
             for self.rule in self.rules:
-                self.name = rule['name']
-                self.type = rule['type']
+                self.name = self.rule['name']
+                self.type = self.rule['type']
                 if self.check_type:
                     greater_equal = self.rule['greater_equal']
                     if not (self.dataframe[greater_equal] >= greater_equal).all():
