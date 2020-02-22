@@ -1,3 +1,5 @@
+from data_explorer.data.schema import Schema
+from data_explorer.data.seed import load_schema
 import pandas as pd
 
 
@@ -6,15 +8,18 @@ def read_file(filename):
     return df
 
 
-def validate_data(dataframe, schema):
-    pass
+def validate_data(dataframe, schema): # complete, research sql_alchemy
     # 1. create schema object from file (function in seed.py)
+    schema = load_schema(dataframe)
     # 2. check dataframe using schema class function
     # 3. return true or false based on result
+    return schema.check_dataframe()
 
 
 # this function assumes that data has passed validation
 def load_data(dataframe, connection):
-    pass
     # 1. set query
+    query = "select * from tbl"
     # 2. run query through connection
+    engine = create_engine('mysql://scott:tiger@localhost/test')
+    result = engine.execute(query)
