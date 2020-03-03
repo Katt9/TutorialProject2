@@ -17,7 +17,7 @@ def load_schema(filename):
         raise InvalidJSONError(f"Invalid JSON type in meta. Expected 'schema', got '{json_type}'")
 
     # 3. Create schema object from json "data" attribute
-    schema = Schema(json_content, len(json_data), json_data)
+    schema = Schema(len(json_data), json_data)
 
     # 4 Return schema object
     return schema
