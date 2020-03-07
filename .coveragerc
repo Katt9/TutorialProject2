@@ -1,0 +1,48 @@
+# .coveragerc to control coverage.py
+[run]
+# in future enable it
+branch = False
+
+# (multi-string, default “thread”): the name concurrency
+# libraries in use by the product code. If your program
+# uses multiprocessing, gevent, greenlet, or eventlet,
+# you must name that library in this option, or coverage.py
+# will produce very wrong results.
+# concurrency =
+
+debug =
+
+plugins =
+
+# parallel
+parallel = False
+
+# leave this False
+timid = False
+
+
+[report]
+# Regexes for lines to exclude from consideration
+exclude_lines =
+    # Have to re-enable the standard pragma
+    pragma: no cover
+    # Don't complain if tests don't hit defensive assertion code:
+    raise NotImplementedError
+
+precision = 0
+ignore_errors = False
+show_missing = True
+skip_covered = False
+# sort = "Name"
+fail_under = 80
+
+#[paths]
+#source =
+#    src/tests
+
+[html]
+directory = ./target/html
+
+[xml]
+output = ./target/cov/cov.xml
+package_depth = 99
