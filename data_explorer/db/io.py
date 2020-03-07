@@ -21,5 +21,5 @@ def load_data(dataframe, connection):
     # 1. set query
     query = "select * from tbl"
     # 2. run query through connection
-    engine = create_engine('mysql://scott:tiger@localhost/test')
+    engine = create_engine('postgresql+psycopg2://aadadey:@localhost/susb')
     result = engine.execute(query)
