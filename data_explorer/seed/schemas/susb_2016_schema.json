@@ -1,0 +1,65 @@
+{
+  "meta":
+  {
+    "type": "schema"
+  },
+  "data":
+          [
+            {
+              "name": "STATE",
+              "type": "int64"
+            },
+            {
+              "name": "NAICS",
+              "type": "object"
+            },
+            {
+              "name": "ENTRSIZE",
+              "type": "int64"
+            },
+            {
+              "name": "FIRM",
+              "type": "int64",
+              "greater_equal": 0
+            },
+            {
+              "name": "ESTB",
+              "type": "int64",
+              "greater_equal": 0
+            },
+            {
+              "name": "EMPL_N",
+              "type": "int64",
+              "greater_equal": 0
+            },
+            {
+              "name": "EMPLFL_R",
+              "type": "object"
+            },
+            {
+              "name": "EMPLFL_N",
+              "type": "object"
+            },
+            {
+              "name": "PAYR_N",
+              "type": "int64",
+              "greater_equal": 0
+            },
+            {
+              "name": "PAYRFL_N",
+              "type": "object"
+            },
+            {
+              "name": "STATEDSCR",
+              "type": "object"
+            },
+            {
+              "name": "NCSDSCR",
+              "type": "object"
+            },
+            {
+              "name": "entrsizedscr",
+              "type": "object"
+            }
+          ]
+}

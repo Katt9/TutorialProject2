@@ -8,12 +8,13 @@ def read_file(filename):
     return df
 
 
-def validate_data(dataframe, schema): # complete, research sql_alchemy
+def validate_data(dataframe, schema_file): # complete, research sql_alchemy
     # 1. create schema object from file (function in seed.py)
-    schema = load_schema(dataframe)
+    schema = load_schema(schema_file)
     # 2. check dataframe using schema class function
+
     # 3. return true or false based on result
-    return schema.check_dataframe()
+    return schema.check_dataframe(dataframe)
 
 
 # this function assumes that data has passed validation
