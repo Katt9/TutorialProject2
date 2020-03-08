@@ -34,13 +34,16 @@ class Schema:
         if self.check_num_of_columns(num_dataframe_cols):
             return self.check_dataframe_columns(dataframe)
         else:
+            print("Dataframe does not contain correct number of columns!")
             return False
 
     def check_dataframe_columns(self, dataframe):
         for rule in self.rules:
             if self.check_type(rule, dataframe):
                 if not self.check_greater_equal(rule, dataframe):
+                    print(f"Dataframe failed greater equal check on column {rule['name']}")
                     return False
             else:
+                print(f"Dataframe failed type check on column {rule['name']}")
                 return False
         return True
