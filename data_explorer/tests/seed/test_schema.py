@@ -36,6 +36,10 @@ def test_check_dataframe(): # complete test_schema
     ch_df = test_schema.check_dataframe(test_df)
     assert ch_df is False
 
+    test_df['new_col'] = ['a', 'b', 'c', 'd']
+    ch_df = test_schema.check_dataframe(test_df)
+    assert ch_df is False
+
 def test_check_greater_equal():
     test_schema, test_df = setup()
     ch_ge = test_schema.check_greater_equal(test_schema.rules[2], test_df)
@@ -59,7 +63,7 @@ def test_check_type(rule, result):
     pytest.param(3, True),
     pytest.param(4, False)])
 
-def check_num_of_columns(num_cols, result):
+def test_check_num_of_columns(num_cols, result):
     test_schema, test_df = setup()
     ch_c = test_schema.check_num_of_columns(num_cols)
     assert ch_c is result
