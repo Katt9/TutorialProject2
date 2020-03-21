@@ -1,11 +1,13 @@
-from data_explorer.data.schema import Schema
 from data_explorer.data.seed import load_schema
 import pandas as pd
 
 
-def read_file(filename):
-    df = pd.read_csv(filename, encoding='ISO-8859-1')
-    return df
+def flat_file_to_pickle(infile, outfile):
+    pass
+
+
+def pickle_to_sql(infile, conn_string):
+    pass
 
 
 def validate_data(dataframe, schema): # complete, research sql_alchemy
